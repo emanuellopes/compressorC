@@ -1,0 +1,54 @@
+# options.ggo
+
+package "pacodec"
+version "1.0"
+versiontext "Primeira entrega de Programacao Avancada"
+
+
+# options
+
+option "PSNR" - "Calculate peak signal-to-noise ratio"
+  string typestr="filename"
+  optional 
+
+option  "dict"  -  "Specify dictionary"
+  string typestr="filename"
+  optional
+
+option "about" - "About paCodec and its authors"
+  optional
+
+defmode "Decode" 
+defmode "Decode dir"
+defmode "Encode"
+defmode "Parallel encode"
+
+modeoption  "decode"  -  "Decode .cod file"
+  string typestr="filename"
+  optional
+  dependon="dict"
+  mode="Decode"
+
+modeoption  "decode-dir"  -  "Decode files .cod in diretory and its subdirectories"
+  string typestr="directory"
+  optional
+  dependon="dict"
+  mode="Decode dir"
+
+modeoption  "encode"  -  "Encode .pgm file"
+  string typestr="filename"
+  optional
+  dependon="dict"
+  mode="Encode"
+
+modeoption  "parallel-encode" -  "Encode .pgm file (multithreaded)"
+  string typestr="filename"
+  optional
+  dependon="dict"
+  mode="Parallel encode"
+
+modeoption  "threads" -  "Define maximum number of threads for encoding"
+  int typestr="integer"
+  optional
+  dependon="parallel-encode"
+  mode="Parallel encode"

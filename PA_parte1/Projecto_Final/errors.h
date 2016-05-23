@@ -1,0 +1,40 @@
+/**
+* @file errors.h
+* @brief erros do programa
+* @author Emanuel João Conceição Lopes <2140825@student.estg.ipleiria.pt>
+*/
+
+#ifndef _ERRORS_H
+#define _ERRORS_H
+
+#define ERR_INVALID_ARGS 1
+#define ERR_OPEN_FAILED 2
+#define ERR_WRONG_VERSION 3
+#define ERR_INVALID_FORMAT 4
+#define ERR_INVALID_PIXELS 5
+#define ERR_INVALID_SIZE 6
+#define ERR_INVALID_MAX_VALUE 7
+#define ERR_INVALID_PGM_FILE 8
+
+
+#define ERR_MISSING_HEADER 10
+#define ERR_INVALID_BLOCKS_NUMBER 12
+#define ERR_INVALID_BLOCK_W_H 13 
+#define ERR_INVALID_BLOCK_MISMATCH 14
+
+#define OK_DECODE_FILE 15
+#define OK_PGM_FILE 16
+
+#define ERR_ALLOC_MEMORY 100
+#define ERR_PGM_INCOMPATIBLE_FILES 103
+#define ERR_INVALID_DIC 104
+#define ERR_MISSING_BLOCK_DIC 105
+#define ERR_MISSING_INDEX_DIC 106
+#define ERR_INVALID_EXTENSION 108
+
+#define ERR_DECODE_FILE 110
+#define ERR_INCOMPATIBLE_DIMENSION 111
+
+#define ERR_SYS_CALL 200
+
+#endif

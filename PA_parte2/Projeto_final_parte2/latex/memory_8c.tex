@@ -1,0 +1,76 @@
+\hypertarget{memory_8c}{}\section{memory.\+c File Reference}
+\label{memory_8c}\index{memory.\+c@{memory.\+c}}
+
+
+Macros para gestão de memória.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{memory_8c_aeb2e2090f3d5543b492d447881da195e}{eipa\+\_\+malloc} (size\+\_\+t size, const int line, const char $\ast$file)
+\item 
+void \hyperlink{memory_8c_a8498d6a8af1eb9fadd2054560fa7ce0c}{eipa\+\_\+free} (void $\ast$$\ast$ptr, const int line, const char $\ast$file)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macros para gestão de memória. 
+
+Macros que serão usadas nos programas que requerem o uso das funções malloc e free \begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\hypertarget{memory_8c_a8498d6a8af1eb9fadd2054560fa7ce0c}{}\index{memory.\+c@{memory.\+c}!eipa\+\_\+free@{eipa\+\_\+free}}
+\index{eipa\+\_\+free@{eipa\+\_\+free}!memory.\+c@{memory.\+c}}
+\subsubsection[{eipa\+\_\+free(void $\ast$$\ast$ptr, const int line, const char $\ast$file)}]{\setlength{\rightskip}{0pt plus 5cm}void eipa\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{ptr, }
+\item[{const int}]{line, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{memory_8c_a8498d6a8af1eb9fadd2054560fa7ce0c}
+Esta função deve ser utilizada para auxiliar a libertação de memória. Esta função {\bfseries não deve} ser chamada directamente, mas sim através da macro \hyperlink{memory_8h_a105949c59c998e38aad80266afac92bf}{F\+R\+E\+E()}. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & endereço do ponteiro a libertar \\
+\hline
+{\em file} & nome do ficheiro (através da macro F\+R\+E\+E) \\
+\hline
+{\em line} & linha onde a função foi chamada (através da macro F\+R\+E\+E) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{memory_8h_a105949c59c998e38aad80266afac92bf}{F\+R\+E\+E} 
+\end{DoxySeeAlso}
+\hypertarget{memory_8c_aeb2e2090f3d5543b492d447881da195e}{}\index{memory.\+c@{memory.\+c}!eipa\+\_\+malloc@{eipa\+\_\+malloc}}
+\index{eipa\+\_\+malloc@{eipa\+\_\+malloc}!memory.\+c@{memory.\+c}}
+\subsubsection[{eipa\+\_\+malloc(size\+\_\+t size, const int line, const char $\ast$file)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ eipa\+\_\+malloc (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size, }
+\item[{const int}]{line, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{memory_8c_aeb2e2090f3d5543b492d447881da195e}
+Esta função deve ser utilizada para auxiliar a alocação de memória. Esta função {\bfseries não deve} ser chamada directamente, mas sim através da macro \hyperlink{memory_8h_a3078f3c259e2a871314e3e0194896357}{M\+A\+L\+L\+O\+C()}. 
+\begin{DoxyParams}{Parameters}
+{\em size} & tamanho do bloco a alocar \\
+\hline
+{\em file} & nome do ficheiro (através da macro M\+A\+L\+L\+O\+C) \\
+\hline
+{\em line} & linha onde a função foi chamada (através da macro M\+A\+L\+L\+O\+C) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O bloco de memória alocado 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{memory_8h_a3078f3c259e2a871314e3e0194896357}{M\+A\+L\+L\+O\+C} 
+\end{DoxySeeAlso}

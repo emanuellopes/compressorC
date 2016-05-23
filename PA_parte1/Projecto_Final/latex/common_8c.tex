@@ -1,0 +1,219 @@
+\hypertarget{common_8c}{}\section{common.\+c File Reference}
+\label{common_8c}\index{common.\+c@{common.\+c}}
+
+
+Algumas funções mais globais.  
+
+
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dic.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{common_8c_abc72b12c7959ec9a5b3aa5269e4f7063}{}void \hyperlink{common_8c_abc72b12c7959ec9a5b3aa5269e4f7063}{install\+\_\+signal\+\_\+handler} (void)\label{common_8c_abc72b12c7959ec9a5b3aa5269e4f7063}
+
+\begin{DoxyCompactList}\small\item\em signal para o ctrl+c \end{DoxyCompactList}\item 
+\hypertarget{common_8c_a72384471ba513dca25a2b5c7c5b1729a}{}void \hyperlink{common_8c_a72384471ba513dca25a2b5c7c5b1729a}{get\+Date} (void)\label{common_8c_a72384471ba513dca25a2b5c7c5b1729a}
+
+\begin{DoxyCompactList}\small\item\em devolve a data e a operacao interrompida \end{DoxyCompactList}\item 
+int \hyperlink{common_8c_a62c1126a1b7675fc7d732916895853e9}{get\+\_\+size} (char $\ast$line, unsigned int $\ast$rows, unsigned int $\ast$columns)
+\begin{DoxyCompactList}\small\item\em tamanho do ficheiro \end{DoxyCompactList}\item 
+int \hyperlink{common_8c_a688659fed537f3fa93e86389ee3caed2}{max\+\_\+value} (char $\ast$line, unsigned int $\ast$max\+Value)
+\begin{DoxyCompactList}\small\item\em devolve o valor maximo do ficheiro \end{DoxyCompactList}\item 
+int \hyperlink{common_8c_af3bfd3d311dcc10d4e826d893ba53393}{remove\+\_\+comments} (char $\ast$line, ssize\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em remove commentarios \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{common_8c_a4ad7d974931f3c071b946769071677a7}{read\+\_\+line} (F\+I\+L\+E $\ast$stream)
+\begin{DoxyCompactList}\small\item\em lê a linha do ficheiro \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{common_8c_a205c8acb2ef70f038f32e5fe361cc8d9}{trimwhitespace} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em faz o trim a string \end{DoxyCompactList}\item 
+int \hyperlink{common_8c_a27bc955172b4a1112694bb118b98e1f5}{get\+Extension} (char $\ast$filename, char $\ast$extension)
+\begin{DoxyCompactList}\small\item\em verifica se a extensão do ficheiro \end{DoxyCompactList}\item 
+void \hyperlink{common_8c_ad42baecb94c39b0e85716a6a3d4cea05}{remove\+Extension} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em remover extensao \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{common_8c_a2f45113638a0b749a8a205d2cd7fb42b}{running} = 1
+\begin{DoxyCompactList}\small\item\em variavel global que verifica se o programa ainda se encontra a correr \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Algumas funções mais globais. 
+
+\begin{DoxyAuthor}{Author}
+Emanuel João Conceição Lopes \href{mailto:2140825@student.estg.ipleiria.pt}{\tt 2140825@student.\+estg.\+ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{common_8c_a62c1126a1b7675fc7d732916895853e9}{}\index{common.\+c@{common.\+c}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!common.\+c@{common.\+c}}
+\subsubsection[{get\+\_\+size(char $\ast$line, unsigned int $\ast$rows, unsigned int $\ast$columns)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{unsigned int $\ast$}]{rows, }
+\item[{unsigned int $\ast$}]{columns}
+\end{DoxyParamCaption}
+)}\label{common_8c_a62c1126a1b7675fc7d732916895853e9}
+
+
+tamanho do ficheiro 
+
+devolve o tamanho do ficheiro e verifica se é correcto
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & -\/ linha do ficheiro \\
+\hline
+{\em rows} & largura \\
+\hline
+{\em columns} & altura \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1=succefull 0=error 
+\end{DoxyReturn}
+\hypertarget{common_8c_a27bc955172b4a1112694bb118b98e1f5}{}\index{common.\+c@{common.\+c}!get\+Extension@{get\+Extension}}
+\index{get\+Extension@{get\+Extension}!common.\+c@{common.\+c}}
+\subsubsection[{get\+Extension(char $\ast$filename, char $\ast$extension)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Extension (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{extension}
+\end{DoxyParamCaption}
+)}\label{common_8c_a27bc955172b4a1112694bb118b98e1f5}
+
+
+verifica se a extensão do ficheiro 
+
+verifica se a extensão do ficheiro é a correcta
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & nome do ficheiro \\
+\hline
+{\em extension} & extensão do ficheiro a confirmar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se a extensão não é a mesma ou 1 se for igual 
+\end{DoxyReturn}
+\hypertarget{common_8c_a688659fed537f3fa93e86389ee3caed2}{}\index{common.\+c@{common.\+c}!max\+\_\+value@{max\+\_\+value}}
+\index{max\+\_\+value@{max\+\_\+value}!common.\+c@{common.\+c}}
+\subsubsection[{max\+\_\+value(char $\ast$line, unsigned int $\ast$max\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}int max\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{unsigned int $\ast$}]{max\+Value}
+\end{DoxyParamCaption}
+)}\label{common_8c_a688659fed537f3fa93e86389ee3caed2}
+
+
+devolve o valor maximo do ficheiro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & do ficheiro lido \\
+\hline
+{\em max\+Value} & devolve o valor maximo\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1=succefull 0=error 
+\end{DoxyReturn}
+\hypertarget{common_8c_a4ad7d974931f3c071b946769071677a7}{}\index{common.\+c@{common.\+c}!read\+\_\+line@{read\+\_\+line}}
+\index{read\+\_\+line@{read\+\_\+line}!common.\+c@{common.\+c}}
+\subsubsection[{read\+\_\+line(\+F\+I\+L\+E $\ast$stream)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ read\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}\label{common_8c_a4ad7d974931f3c071b946769071677a7}
+
+
+lê a linha do ficheiro 
+
+lê a linha do ficheiro e remove o lixo
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+line without trash 
+\end{DoxyReturn}
+\hypertarget{common_8c_af3bfd3d311dcc10d4e826d893ba53393}{}\index{common.\+c@{common.\+c}!remove\+\_\+comments@{remove\+\_\+comments}}
+\index{remove\+\_\+comments@{remove\+\_\+comments}!common.\+c@{common.\+c}}
+\subsubsection[{remove\+\_\+comments(char $\ast$line, ssize\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}int remove\+\_\+comments (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{ssize\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\label{common_8c_af3bfd3d311dcc10d4e826d893ba53393}
+
+
+remove commentarios 
+
+remove commentarios das linhas
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se a linha já não tem lixo e tem conteúdo 
+
+1 se a linha só tem lixo ou está vazia 
+\end{DoxyReturn}
+\hypertarget{common_8c_ad42baecb94c39b0e85716a6a3d4cea05}{}\index{common.\+c@{common.\+c}!remove\+Extension@{remove\+Extension}}
+\index{remove\+Extension@{remove\+Extension}!common.\+c@{common.\+c}}
+\subsubsection[{remove\+Extension(char $\ast$filename)}]{\setlength{\rightskip}{0pt plus 5cm}void remove\+Extension (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{common_8c_ad42baecb94c39b0e85716a6a3d4cea05}
+
+
+remover extensao 
+
+remove a extensão do nome e devolve
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & nome do ficheiro \\
+\hline
+\end{DoxyParams}
+\hypertarget{common_8c_a205c8acb2ef70f038f32e5fe361cc8d9}{}\index{common.\+c@{common.\+c}!trimwhitespace@{trimwhitespace}}
+\index{trimwhitespace@{trimwhitespace}!common.\+c@{common.\+c}}
+\subsubsection[{trimwhitespace(char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ trimwhitespace (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{common_8c_a205c8acb2ef70f038f32e5fe361cc8d9}
+
+
+faz o trim a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string sem espaços no principio e no fim 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{common_8c_a2f45113638a0b749a8a205d2cd7fb42b}{}\index{common.\+c@{common.\+c}!running@{running}}
+\index{running@{running}!common.\+c@{common.\+c}}
+\subsubsection[{running}]{\setlength{\rightskip}{0pt plus 5cm}int running = 1}\label{common_8c_a2f45113638a0b749a8a205d2cd7fb42b}
+
+
+variavel global que verifica se o programa ainda se encontra a correr 
+
+Starts variable running = 1 

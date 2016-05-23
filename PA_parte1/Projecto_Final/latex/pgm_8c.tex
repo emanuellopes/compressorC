@@ -1,0 +1,127 @@
+\hypertarget{pgm_8c}{}\section{pgm.\+c File Reference}
+\label{pgm_8c}\index{pgm.\+c@{pgm.\+c}}
+
+
+Funções relativas à leitura dos ficheiros pgm.  
+
+
+{\ttfamily \#include \char`\"{}pgm.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pgm_8c_a4d08f237a1b223f3cebfbf9e48434ad1}{open\+\_\+file\+\_\+pgm} (char $\ast$path, \hyperlink{structpgm__t}{pgm\+\_\+t} $\ast$pgm\+File)
+\begin{DoxyCompactList}\small\item\em abreo o ficheiro pgm \end{DoxyCompactList}\item 
+int \hyperlink{pgm_8c_a181483921dba7ed091693e9dfe19e3c0}{read\+\_\+header\+\_\+pgm} (F\+I\+L\+E $\ast$stream, const char $\ast$path, \hyperlink{structheader__pgm__t}{header\+\_\+pgm\+\_\+t} $\ast$header)
+\begin{DoxyCompactList}\small\item\em ĺê o cabeçalho do ficheiro. \end{DoxyCompactList}\item 
+int \hyperlink{pgm_8c_a3db877d10acbca2e9d0e736b1d51382f}{is\+\_\+pgm\+\_\+file} (char $\ast$line, file\+\_\+pgm\+\_\+t $\ast$version)
+\begin{DoxyCompactList}\small\item\em verifica e devolve a versao do ficheiro P2 ou P5 \end{DoxyCompactList}\item 
+int \hyperlink{pgm_8c_a26b4f8db8d0473d8ace2645326915d47}{read\+\_\+body\+\_\+pgm} (F\+I\+L\+E $\ast$stream, \hyperlink{structpgm__t}{pgm\+\_\+t} $\ast$pgm\+File)
+\begin{DoxyCompactList}\small\item\em lê o corpo do ficheiro \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções relativas à leitura dos ficheiros pgm. 
+
+\begin{DoxyAuthor}{Author}
+Emanuel João Conceição Lopes \href{mailto:2140825@student.estg.ipleiria.pt}{\tt 2140825@student.\+estg.\+ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{pgm_8c_a3db877d10acbca2e9d0e736b1d51382f}{}\index{pgm.\+c@{pgm.\+c}!is\+\_\+pgm\+\_\+file@{is\+\_\+pgm\+\_\+file}}
+\index{is\+\_\+pgm\+\_\+file@{is\+\_\+pgm\+\_\+file}!pgm.\+c@{pgm.\+c}}
+\subsubsection[{is\+\_\+pgm\+\_\+file(char $\ast$line, file\+\_\+pgm\+\_\+t $\ast$version)}]{\setlength{\rightskip}{0pt plus 5cm}int is\+\_\+pgm\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{file\+\_\+pgm\+\_\+t $\ast$}]{version}
+\end{DoxyParamCaption}
+)}\label{pgm_8c_a3db877d10acbca2e9d0e736b1d51382f}
+
+
+verifica e devolve a versao do ficheiro P2 ou P5 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & -\/ linha do ficheiro de texto \\
+\hline
+{\em version} & -\/ versao do ficheiro\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/succefull, !=0 em caso de erro 
+\end{DoxyReturn}
+\hypertarget{pgm_8c_a4d08f237a1b223f3cebfbf9e48434ad1}{}\index{pgm.\+c@{pgm.\+c}!open\+\_\+file\+\_\+pgm@{open\+\_\+file\+\_\+pgm}}
+\index{open\+\_\+file\+\_\+pgm@{open\+\_\+file\+\_\+pgm}!pgm.\+c@{pgm.\+c}}
+\subsubsection[{open\+\_\+file\+\_\+pgm(char $\ast$path, pgm\+\_\+t $\ast$pgm\+File)}]{\setlength{\rightskip}{0pt plus 5cm}int open\+\_\+file\+\_\+pgm (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path, }
+\item[{{\bf pgm\+\_\+t} $\ast$}]{pgm\+File}
+\end{DoxyParamCaption}
+)}\label{pgm_8c_a4d08f237a1b223f3cebfbf9e48434ad1}
+
+
+abreo o ficheiro pgm 
+
+\mbox{[}long description\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em pgm\+File} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+!=0 falha 
+\end{DoxyReturn}
+\hypertarget{pgm_8c_a26b4f8db8d0473d8ace2645326915d47}{}\index{pgm.\+c@{pgm.\+c}!read\+\_\+body\+\_\+pgm@{read\+\_\+body\+\_\+pgm}}
+\index{read\+\_\+body\+\_\+pgm@{read\+\_\+body\+\_\+pgm}!pgm.\+c@{pgm.\+c}}
+\subsubsection[{read\+\_\+body\+\_\+pgm(\+F\+I\+L\+E $\ast$stream, pgm\+\_\+t $\ast$pgm\+File)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+body\+\_\+pgm (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream, }
+\item[{{\bf pgm\+\_\+t} $\ast$}]{pgm\+File}
+\end{DoxyParamCaption}
+)}\label{pgm_8c_a26b4f8db8d0473d8ace2645326915d47}
+
+
+lê o corpo do ficheiro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & \\
+\hline
+{\em cod\+File} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+!=0 erro 0=ok 
+\end{DoxyReturn}
+\hypertarget{pgm_8c_a181483921dba7ed091693e9dfe19e3c0}{}\index{pgm.\+c@{pgm.\+c}!read\+\_\+header\+\_\+pgm@{read\+\_\+header\+\_\+pgm}}
+\index{read\+\_\+header\+\_\+pgm@{read\+\_\+header\+\_\+pgm}!pgm.\+c@{pgm.\+c}}
+\subsubsection[{read\+\_\+header\+\_\+pgm(\+F\+I\+L\+E $\ast$stream, const char $\ast$path, header\+\_\+pgm\+\_\+t $\ast$header)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+header\+\_\+pgm (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream, }
+\item[{const char $\ast$}]{path, }
+\item[{{\bf header\+\_\+pgm\+\_\+t} $\ast$}]{header}
+\end{DoxyParamCaption}
+)}\label{pgm_8c_a181483921dba7ed091693e9dfe19e3c0}
+
+
+ĺê o cabeçalho do ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & F\+I\+L\+E stream \\
+\hline
+{\em path} & nome do ficheiro \\
+\hline
+{\em header} & estrutura do header \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/ok 1-\/falha 
+\end{DoxyReturn}

@@ -1,0 +1,75 @@
+\hypertarget{decode_8c}{}\section{decode.\+c File Reference}
+\label{decode_8c}\index{decode.\+c@{decode.\+c}}
+
+
+Funções de descodificação.  
+
+
+{\ttfamily \#include \char`\"{}decode.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{decode_8c_a06b3bc4a41f02e4faa73e7b99a55cf2b}{decode\+File} (\hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic, \hyperlink{structcod__t}{cod\+\_\+t} $\ast$cod)
+\begin{DoxyCompactList}\small\item\em descodificar ficheiro Z2 ou Z5 \end{DoxyCompactList}\item 
+int \hyperlink{decode_8c_af63fe07ad52362f288362e58b99387c1}{decode\+\_\+dir} (char $\ast$folder\+\_\+name, \hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic\+File)
+\begin{DoxyCompactList}\small\item\em descodifica ficheiros de forma recursiva \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções de descodificação. 
+
+\begin{DoxyAuthor}{Author}
+Emanuel João Conceição Lopes \href{mailto:2140825@student.estg.ipleiria.pt}{\tt 2140825@student.\+estg.\+ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{decode_8c_af63fe07ad52362f288362e58b99387c1}{}\index{decode.\+c@{decode.\+c}!decode\+\_\+dir@{decode\+\_\+dir}}
+\index{decode\+\_\+dir@{decode\+\_\+dir}!decode.\+c@{decode.\+c}}
+\subsubsection[{decode\+\_\+dir(char $\ast$folder\+\_\+name, dic\+\_\+t $\ast$dic\+File)}]{\setlength{\rightskip}{0pt plus 5cm}int decode\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{folder\+\_\+name, }
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic\+File}
+\end{DoxyParamCaption}
+)}\label{decode_8c_af63fe07ad52362f288362e58b99387c1}
+
+
+descodifica ficheiros de forma recursiva 
+
+descodifica ficheiros cod em qualquer pasta
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & pasta \\
+\hline
+{\em dic\+File} & ficheiro dicionario\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/ ok 1-\/ falha 
+\end{DoxyReturn}
+\hypertarget{decode_8c_a06b3bc4a41f02e4faa73e7b99a55cf2b}{}\index{decode.\+c@{decode.\+c}!decode\+File@{decode\+File}}
+\index{decode\+File@{decode\+File}!decode.\+c@{decode.\+c}}
+\subsubsection[{decode\+File(dic\+\_\+t $\ast$dic, cod\+\_\+t $\ast$cod)}]{\setlength{\rightskip}{0pt plus 5cm}int decode\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic, }
+\item[{{\bf cod\+\_\+t} $\ast$}]{cod}
+\end{DoxyParamCaption}
+)}\label{decode_8c_a06b3bc4a41f02e4faa73e7b99a55cf2b}
+
+
+descodificar ficheiro Z2 ou Z5 
+
+descodifica ficheiros do tipo Z2 e Z5
+
+
+\begin{DoxyParams}{Parameters}
+{\em dic} & ficheiro dicionario \\
+\hline
+{\em cod} & ficheiro codificado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 O\+K 1 -\/ falha 
+\end{DoxyReturn}

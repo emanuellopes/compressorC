@@ -1,0 +1,125 @@
+\hypertarget{dic_8c}{}\section{dic.\+c File Reference}
+\label{dic_8c}\index{dic.\+c@{dic.\+c}}
+
+
+Funções do dicionario.  
+
+
+{\ttfamily \#include \char`\"{}dic.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{dic_8c_a15a76c484e4de0d48591f1da5ec3de1a}{open\+\_\+file\+\_\+dic} (char $\ast$path, \hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic\+File)
+\begin{DoxyCompactList}\small\item\em abre ficheiro dicionario \end{DoxyCompactList}\item 
+int \hyperlink{dic_8c_a35bf56e98dd6e411dddd42ab9dcfa199}{read\+\_\+header\+\_\+dic} (F\+I\+L\+E $\ast$stream, const char $\ast$path, \hyperlink{structdic__header__t}{dic\+\_\+header\+\_\+t} $\ast$header)
+\begin{DoxyCompactList}\small\item\em ĺê o cabeçalho do ficheiro. \end{DoxyCompactList}\item 
+int \hyperlink{dic_8c_ab42bae31a6af5ec0c3d930df3d285558}{read\+\_\+body\+\_\+dic} (F\+I\+L\+E $\ast$stream, \hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic\+File)
+\begin{DoxyCompactList}\small\item\em ler corpo do dicionario \end{DoxyCompactList}\item 
+int \hyperlink{dic_8c_ae219858833a429ff8c81ad20b755c791}{split\+\_\+number\+\_\+check} (char $\ast$line, unsigned int $\ast$number)
+\begin{DoxyCompactList}\small\item\em dividir os numeros \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funções do dicionario. 
+
+\begin{DoxyAuthor}{Author}
+Emanuel João Conceição Lopes \href{mailto:2140825@student.estg.ipleiria.pt}{\tt 2140825@student.\+estg.\+ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{dic_8c_a15a76c484e4de0d48591f1da5ec3de1a}{}\index{dic.\+c@{dic.\+c}!open\+\_\+file\+\_\+dic@{open\+\_\+file\+\_\+dic}}
+\index{open\+\_\+file\+\_\+dic@{open\+\_\+file\+\_\+dic}!dic.\+c@{dic.\+c}}
+\subsubsection[{open\+\_\+file\+\_\+dic(char $\ast$path, dic\+\_\+t $\ast$dic\+File)}]{\setlength{\rightskip}{0pt plus 5cm}int open\+\_\+file\+\_\+dic (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path, }
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic\+File}
+\end{DoxyParamCaption}
+)}\label{dic_8c_a15a76c484e4de0d48591f1da5ec3de1a}
+
+
+abre ficheiro dicionario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & ficheiro \\
+\hline
+{\em dic\+File} & estrutura do dicionario\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/ok 1-\/falha 
+\end{DoxyReturn}
+\hypertarget{dic_8c_ab42bae31a6af5ec0c3d930df3d285558}{}\index{dic.\+c@{dic.\+c}!read\+\_\+body\+\_\+dic@{read\+\_\+body\+\_\+dic}}
+\index{read\+\_\+body\+\_\+dic@{read\+\_\+body\+\_\+dic}!dic.\+c@{dic.\+c}}
+\subsubsection[{read\+\_\+body\+\_\+dic(\+F\+I\+L\+E $\ast$stream, dic\+\_\+t $\ast$dic\+File)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+body\+\_\+dic (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream, }
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic\+File}
+\end{DoxyParamCaption}
+)}\label{dic_8c_ab42bae31a6af5ec0c3d930df3d285558}
+
+
+ler corpo do dicionario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & \\
+\hline
+{\em dic\+File} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/ok 1-\/falha 
+\end{DoxyReturn}
+\hypertarget{dic_8c_a35bf56e98dd6e411dddd42ab9dcfa199}{}\index{dic.\+c@{dic.\+c}!read\+\_\+header\+\_\+dic@{read\+\_\+header\+\_\+dic}}
+\index{read\+\_\+header\+\_\+dic@{read\+\_\+header\+\_\+dic}!dic.\+c@{dic.\+c}}
+\subsubsection[{read\+\_\+header\+\_\+dic(\+F\+I\+L\+E $\ast$stream, const char $\ast$path, dic\+\_\+header\+\_\+t $\ast$header)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+header\+\_\+dic (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream, }
+\item[{const char $\ast$}]{path, }
+\item[{{\bf dic\+\_\+header\+\_\+t} $\ast$}]{header}
+\end{DoxyParamCaption}
+)}\label{dic_8c_a35bf56e98dd6e411dddd42ab9dcfa199}
+
+
+ĺê o cabeçalho do ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & F\+I\+L\+E stream \\
+\hline
+{\em path} & nome do ficheiro \\
+\hline
+{\em header} & estrutura do header \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/ok 1-\/falha 
+\end{DoxyReturn}
+\hypertarget{dic_8c_ae219858833a429ff8c81ad20b755c791}{}\index{dic.\+c@{dic.\+c}!split\+\_\+number\+\_\+check@{split\+\_\+number\+\_\+check}}
+\index{split\+\_\+number\+\_\+check@{split\+\_\+number\+\_\+check}!dic.\+c@{dic.\+c}}
+\subsubsection[{split\+\_\+number\+\_\+check(char $\ast$line, unsigned int $\ast$number)}]{\setlength{\rightskip}{0pt plus 5cm}int split\+\_\+number\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{unsigned int $\ast$}]{number}
+\end{DoxyParamCaption}
+)}\label{dic_8c_ae219858833a429ff8c81ad20b755c791}
+
+
+dividir os numeros 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/ok outro -\/ falha 
+\end{DoxyReturn}

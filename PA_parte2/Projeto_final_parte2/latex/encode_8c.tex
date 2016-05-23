@@ -1,0 +1,278 @@
+\hypertarget{encode_8c}{}\section{encode.\+c File Reference}
+\label{encode_8c}\index{encode.\+c@{encode.\+c}}
+
+
+Function to handle C\+O\+D files.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$limits.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}encode.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}signal\+\_\+handler.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{encode_8c_abe0ec333b60117063f9b9fd9f849cb08}{}\#define {\bfseries M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E}~512\label{encode_8c_abe0ec333b60117063f9b9fd9f849cb08}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{encode_8c_ad25833d1817ace3f396e3800fdb3398b}{encode\+\_\+init} (\hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} $\ast$structencode, char $\ast$path\+Dic, char $\ast$path\+Pgm)
+\begin{DoxyCompactList}\small\item\em main function for initiate structure encode \end{DoxyCompactList}\item 
+void \hyperlink{encode_8c_a768a0a8226ac677482d9f059d4a87759}{encode\+\_\+free} (\hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} $\ast$encode)
+\begin{DoxyCompactList}\small\item\em free dic and pgm structure \end{DoxyCompactList}\item 
+int \hyperlink{encode_8c_a4982ef3b85e82c4c0f4616687558c266}{encode\+\_\+single} (\hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} $\ast$structencode, char $\ast$path\+Dic, char $\ast$path\+Pgm)
+\begin{DoxyCompactList}\small\item\em linear encode pgm \end{DoxyCompactList}\item 
+int \hyperlink{encode_8c_adcbcc4bfab0532882a016751041445ab}{parallel\+\_\+encode} (\hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} $\ast$structencode, int threads, char $\ast$path\+Dic, char $\ast$path\+Pgm)
+\begin{DoxyCompactList}\small\item\em parallel encode for pgm files \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{encode_8c_a4d08f7c9ee005e9d027aa183695d101d}{calculate} (void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em calculate best index, used in parallel encode \end{DoxyCompactList}\item 
+int \hyperlink{encode_8c_ac77210cb6515ff2127dc74fc6d749648}{check\+\_\+blocks} (int width, int height, int block\+Rows, int block\+Columns)
+\begin{DoxyCompactList}\small\item\em check if blocks is corrects between pgm and dict file \end{DoxyCompactList}\item 
+void \hyperlink{encode_8c_ae95e9e7a9cbfe5a7a9239268ed4ed980}{get\+Block\+\_\+\+Pixel} (\hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} $\ast$structencode)
+\begin{DoxyCompactList}\small\item\em get block of pixel \end{DoxyCompactList}\item 
+unsigned short \hyperlink{encode_8c_a8b3c4d261518b46a206107b9a3a0077f}{best\+\_\+index} (\hyperlink{structpgm__t}{pgm\+\_\+t} $\ast$pgm, \hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic, int i, int j)
+\begin{DoxyCompactList}\small\item\em get best pixel of line, and return line of dictionary  squared error caulculation \end{DoxyCompactList}\item 
+int \hyperlink{encode_8c_a9789989749cdad51dbea6901c4fbb9e9}{write\+File} (char $\ast$file\+Name\+Pgm, char $\ast$file\+Name\+Dic, \hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} $\ast$structencode)
+\begin{DoxyCompactList}\small\item\em write content to cod file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function to handle C\+O\+D files. 
+
+Main.
+
+\begin{DoxyDate}{Date}
+2015-\/12-\/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\href{mailto:2140825@ipleiria.pt}{\tt 2140825@ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{encode_8c_a8b3c4d261518b46a206107b9a3a0077f}{}\index{encode.\+c@{encode.\+c}!best\+\_\+index@{best\+\_\+index}}
+\index{best\+\_\+index@{best\+\_\+index}!encode.\+c@{encode.\+c}}
+\subsubsection[{best\+\_\+index(pgm\+\_\+t $\ast$pgm, dic\+\_\+t $\ast$dic, int i, int j)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short best\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf pgm\+\_\+t} $\ast$}]{pgm, }
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\label{encode_8c_a8b3c4d261518b46a206107b9a3a0077f}
+
+
+get best pixel of line, and return line of dictionary  squared error caulculation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm} & struct of pgm \\
+\hline
+{\em dic} & struct of dictionary \\
+\hline
+{\em i} & x coord more left block \\
+\hline
+{\em j} & y coord more left block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+line of dictionary(best pixel) 
+\end{DoxyReturn}
+\hypertarget{encode_8c_a4d08f7c9ee005e9d027aa183695d101d}{}\index{encode.\+c@{encode.\+c}!calculate@{calculate}}
+\index{calculate@{calculate}!encode.\+c@{encode.\+c}}
+\subsubsection[{calculate(void $\ast$arg)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ calculate (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\label{encode_8c_a4d08f7c9ee005e9d027aa183695d101d}
+
+
+calculate best index, used in parallel encode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & \hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+\hypertarget{encode_8c_ac77210cb6515ff2127dc74fc6d749648}{}\index{encode.\+c@{encode.\+c}!check\+\_\+blocks@{check\+\_\+blocks}}
+\index{check\+\_\+blocks@{check\+\_\+blocks}!encode.\+c@{encode.\+c}}
+\subsubsection[{check\+\_\+blocks(int width, int height, int block\+Rows, int block\+Columns)}]{\setlength{\rightskip}{0pt plus 5cm}int check\+\_\+blocks (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{block\+Rows, }
+\item[{int}]{block\+Columns}
+\end{DoxyParamCaption}
+)}\label{encode_8c_ac77210cb6515ff2127dc74fc6d749648}
+
+
+check if blocks is corrects between pgm and dict file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & width of image \\
+\hline
+{\em height} & height of image \\
+\hline
+{\em block\+Rows} & width block dictionary \\
+\hline
+{\em block\+Columns} & height block dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0=succefull and !=0 is error 
+\end{DoxyReturn}
+\hypertarget{encode_8c_a768a0a8226ac677482d9f059d4a87759}{}\index{encode.\+c@{encode.\+c}!encode\+\_\+free@{encode\+\_\+free}}
+\index{encode\+\_\+free@{encode\+\_\+free}!encode.\+c@{encode.\+c}}
+\subsubsection[{encode\+\_\+free(struct\+\_\+encode\+\_\+t $\ast$encode)}]{\setlength{\rightskip}{0pt plus 5cm}void encode\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf struct\+\_\+encode\+\_\+t} $\ast$}]{encode}
+\end{DoxyParamCaption}
+)}\label{encode_8c_a768a0a8226ac677482d9f059d4a87759}
+
+
+free dic and pgm structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encode} & structure\+\_\+encode\+\_\+t \\
+\hline
+\end{DoxyParams}
+\hypertarget{encode_8c_ad25833d1817ace3f396e3800fdb3398b}{}\index{encode.\+c@{encode.\+c}!encode\+\_\+init@{encode\+\_\+init}}
+\index{encode\+\_\+init@{encode\+\_\+init}!encode.\+c@{encode.\+c}}
+\subsubsection[{encode\+\_\+init(struct\+\_\+encode\+\_\+t $\ast$structencode, char $\ast$path\+Dic, char $\ast$path\+Pgm)}]{\setlength{\rightskip}{0pt plus 5cm}int encode\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf struct\+\_\+encode\+\_\+t} $\ast$}]{structencode, }
+\item[{char $\ast$}]{path\+Dic, }
+\item[{char $\ast$}]{path\+Pgm}
+\end{DoxyParamCaption}
+)}\label{encode_8c_ad25833d1817ace3f396e3800fdb3398b}
+
+
+main function for initiate structure encode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structencode} & struct of encode file \\
+\hline
+{\em path\+Dic} & filename path of dictionary \\
+\hline
+{\em path\+Pgm} & filename path of pgm \\
+\hline
+{\em parallel} & check if for parallel encode \\
+\hline
+{\em threads} & number of threads \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int status code 
+\end{DoxyReturn}
+\hypertarget{encode_8c_a4982ef3b85e82c4c0f4616687558c266}{}\index{encode.\+c@{encode.\+c}!encode\+\_\+single@{encode\+\_\+single}}
+\index{encode\+\_\+single@{encode\+\_\+single}!encode.\+c@{encode.\+c}}
+\subsubsection[{encode\+\_\+single(struct\+\_\+encode\+\_\+t $\ast$structencode, char $\ast$path\+Dic, char $\ast$path\+Pgm)}]{\setlength{\rightskip}{0pt plus 5cm}int encode\+\_\+single (
+\begin{DoxyParamCaption}
+\item[{{\bf struct\+\_\+encode\+\_\+t} $\ast$}]{structencode, }
+\item[{char $\ast$}]{path\+Dic, }
+\item[{char $\ast$}]{path\+Pgm}
+\end{DoxyParamCaption}
+)}\label{encode_8c_a4982ef3b85e82c4c0f4616687558c266}
+
+
+linear encode pgm 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structencode} & \hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} \\
+\hline
+{\em path\+Dic} & path for dic \\
+\hline
+{\em path\+Pgm} & path for pgm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}
+\hypertarget{encode_8c_ae95e9e7a9cbfe5a7a9239268ed4ed980}{}\index{encode.\+c@{encode.\+c}!get\+Block\+\_\+\+Pixel@{get\+Block\+\_\+\+Pixel}}
+\index{get\+Block\+\_\+\+Pixel@{get\+Block\+\_\+\+Pixel}!encode.\+c@{encode.\+c}}
+\subsubsection[{get\+Block\+\_\+\+Pixel(struct\+\_\+encode\+\_\+t $\ast$structencode)}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Block\+\_\+\+Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf struct\+\_\+encode\+\_\+t} $\ast$}]{structencode}
+\end{DoxyParamCaption}
+)}\label{encode_8c_ae95e9e7a9cbfe5a7a9239268ed4ed980}
+
+
+get block of pixel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structencode} & struct \hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{encode_8c_adcbcc4bfab0532882a016751041445ab}{}\index{encode.\+c@{encode.\+c}!parallel\+\_\+encode@{parallel\+\_\+encode}}
+\index{parallel\+\_\+encode@{parallel\+\_\+encode}!encode.\+c@{encode.\+c}}
+\subsubsection[{parallel\+\_\+encode(struct\+\_\+encode\+\_\+t $\ast$structencode, int threads, char $\ast$path\+Dic, char $\ast$path\+Pgm)}]{\setlength{\rightskip}{0pt plus 5cm}int parallel\+\_\+encode (
+\begin{DoxyParamCaption}
+\item[{{\bf struct\+\_\+encode\+\_\+t} $\ast$}]{structencode, }
+\item[{int}]{threads, }
+\item[{char $\ast$}]{path\+Dic, }
+\item[{char $\ast$}]{path\+Pgm}
+\end{DoxyParamCaption}
+)}\label{encode_8c_adcbcc4bfab0532882a016751041445ab}
+
+
+parallel encode for pgm files 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structencode} & \hyperlink{structstruct__encode__t}{struct\+\_\+encode\+\_\+t} \\
+\hline
+{\em threads} & number of threads \\
+\hline
+{\em path\+Dic} & path of Dic File \\
+\hline
+{\em path\+Pgm} & path of Pgm File \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}
+\hypertarget{encode_8c_a9789989749cdad51dbea6901c4fbb9e9}{}\index{encode.\+c@{encode.\+c}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!encode.\+c@{encode.\+c}}
+\subsubsection[{write\+File(char $\ast$file\+Name\+Pgm, char $\ast$file\+Name\+Dic, struct\+\_\+encode\+\_\+t $\ast$structencode)}]{\setlength{\rightskip}{0pt plus 5cm}int write\+File (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name\+Pgm, }
+\item[{char $\ast$}]{file\+Name\+Dic, }
+\item[{{\bf struct\+\_\+encode\+\_\+t} $\ast$}]{structencode}
+\end{DoxyParamCaption}
+)}\label{encode_8c_a9789989749cdad51dbea6901c4fbb9e9}
+
+
+write content to cod file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name\+Pgm} & pgm filename \\
+\hline
+{\em file\+Name\+Dic} & dictionary filename \\
+\hline
+{\em structencode} & struct encode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}

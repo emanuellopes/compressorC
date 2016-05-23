@@ -1,0 +1,101 @@
+\hypertarget{dic_8h}{}\section{dic.\+h File Reference}
+\label{dic_8h}\index{dic.\+h@{dic.\+h}}
+
+
+Function to parse a D\+I\+C file.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdic__t}{dic\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structdic__t}{dic\+\_\+t} \hyperlink{dic_8h_ab01e0ec298c5113d6af2af1b0b2ffcc5}{dic\+\_\+init} (void)
+\item 
+int \hyperlink{dic_8h_a5ff97308b232892e24ded3a99461af2c}{dic\+\_\+parse\+\_\+file} (const char $\ast$filename, \hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic)
+\item 
+void \hyperlink{dic_8h_a6c7cddea8d4e6a269c9770f30f05de2d}{dic\+\_\+free} (\hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic)
+\item 
+unsigned short \hyperlink{dic_8h_a9d4713acdeede9cdcd43cff21b1c92fd}{dic\+\_\+get\+\_\+pixel} (\hyperlink{structdic__t}{dic\+\_\+t} $\ast$dic, unsigned short index, unsigned int x, unsigned int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function to parse a D\+I\+C file. 
+
+\begin{DoxyDate}{Date}
+2015-\/11-\/25 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\href{mailto:vitor.carreira@ipleiria.pt}{\tt vitor.\+carreira@ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{dic_8h_a6c7cddea8d4e6a269c9770f30f05de2d}{}\index{dic.\+h@{dic.\+h}!dic\+\_\+free@{dic\+\_\+free}}
+\index{dic\+\_\+free@{dic\+\_\+free}!dic.\+h@{dic.\+h}}
+\subsubsection[{dic\+\_\+free(dic\+\_\+t $\ast$dic)}]{\setlength{\rightskip}{0pt plus 5cm}void dic\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic}
+\end{DoxyParamCaption}
+)}\label{dic_8h_a6c7cddea8d4e6a269c9770f30f05de2d}
+Release the memory held by the provided dic structure 
+\begin{DoxyParams}{Parameters}
+{\em dic} & a pointer to the structure to release \\
+\hline
+\end{DoxyParams}
+\hypertarget{dic_8h_a9d4713acdeede9cdcd43cff21b1c92fd}{}\index{dic.\+h@{dic.\+h}!dic\+\_\+get\+\_\+pixel@{dic\+\_\+get\+\_\+pixel}}
+\index{dic\+\_\+get\+\_\+pixel@{dic\+\_\+get\+\_\+pixel}!dic.\+h@{dic.\+h}}
+\subsubsection[{dic\+\_\+get\+\_\+pixel(dic\+\_\+t $\ast$dic, unsigned short index, unsigned int x, unsigned int y)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short dic\+\_\+get\+\_\+pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic, }
+\item[{unsigned short}]{index, }
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y}
+\end{DoxyParamCaption}
+)}\label{dic_8h_a9d4713acdeede9cdcd43cff21b1c92fd}
+Returns the value of the pixel (x,y) within the block with the given index. 
+\begin{DoxyParams}{Parameters}
+{\em dic} & the dictionary structure \\
+\hline
+{\em index} & the block index \\
+\hline
+{\em x} & the x position of the pixel (column) \\
+\hline
+{\em y} & the y position of the pixel (row) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the pixel (x,y) within the block with the given index. 
+\end{DoxyReturn}
+\hypertarget{dic_8h_ab01e0ec298c5113d6af2af1b0b2ffcc5}{}\index{dic.\+h@{dic.\+h}!dic\+\_\+init@{dic\+\_\+init}}
+\index{dic\+\_\+init@{dic\+\_\+init}!dic.\+h@{dic.\+h}}
+\subsubsection[{dic\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dic\+\_\+t} dic\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{dic_8h_ab01e0ec298c5113d6af2af1b0b2ffcc5}
+Initializes a D\+I\+C structure \begin{DoxyReturn}{Returns}
+a D\+I\+C structure initialized 
+\end{DoxyReturn}
+\hypertarget{dic_8h_a5ff97308b232892e24ded3a99461af2c}{}\index{dic.\+h@{dic.\+h}!dic\+\_\+parse\+\_\+file@{dic\+\_\+parse\+\_\+file}}
+\index{dic\+\_\+parse\+\_\+file@{dic\+\_\+parse\+\_\+file}!dic.\+h@{dic.\+h}}
+\subsubsection[{dic\+\_\+parse\+\_\+file(const char $\ast$filename, dic\+\_\+t $\ast$dic)}]{\setlength{\rightskip}{0pt plus 5cm}int dic\+\_\+parse\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf dic\+\_\+t} $\ast$}]{dic}
+\end{DoxyParamCaption}
+)}\label{dic_8h_a5ff97308b232892e24ded3a99461af2c}
+Parses a dic file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename\textquotesingle{}s path to be parsed. \\
+\hline
+{\em dic} & pointer to the structure where the content of the file is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success; a positive error code otherwise 
+\end{DoxyReturn}

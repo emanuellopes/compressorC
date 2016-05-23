@@ -1,0 +1,286 @@
+\hypertarget{debug_8h}{}\section{debug.\+h File Reference}
+\label{debug_8h}\index{debug.\+h@{debug.\+h}}
+
+
+Macros das funções de depuração.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{debug_8h_a96dd473db0b3d10bd43390cdacb00120}{D\+E\+B\+U\+G}(...)~\hyperlink{debug_8h_acc17bf1a6a66cde4a4b03e1376e68e20}{debug}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{debug_8h_a8d12d0f11fc9acd2f1fa22d80895ddae}{W\+A\+R\+N\+I\+N\+G}(...)~\hyperlink{debug_8h_a4befecaccba59492862dbf09c4c82b24}{warning}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{debug_8h_a8f448861da74111034b91e293ab3a278}{E\+R\+R\+O\+R}(exit\+Code, ...)~\hyperlink{debug_8h_a00ba4f07a31f46cef16f3057b8662a96}{error}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, (exit\+Code), \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{debug_8h_ada8f08bfa2fb4ed49f70f607b1673eca}{H\+\_\+\+W\+A\+R\+N\+I\+N\+G}(...)~\hyperlink{debug_8h_aef70c8e59b9a71be54e6f859df15a183}{h\+\_\+warning}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{debug_8h_aa533515393a45f031c0841bb27e6f6ad}{H\+\_\+\+E\+R\+R\+O\+R}(exit\+Code, ...)~\hyperlink{debug_8h_ae9f36ff80fde369e5dc95cd100bcfb0d}{h\+\_\+error}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, (exit\+Code), \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{debug_8h_acc17bf1a6a66cde4a4b03e1376e68e20}{debug} (const char $\ast$file, const int line, char $\ast$fmt,...)
+\item 
+void \hyperlink{debug_8h_a4befecaccba59492862dbf09c4c82b24}{warning} (const char $\ast$file, const int line, char $\ast$fmt,...)
+\item 
+void \hyperlink{debug_8h_a00ba4f07a31f46cef16f3057b8662a96}{error} (const char $\ast$file, const int line, int exit\+Code, char $\ast$fmt,...)
+\item 
+void \hyperlink{debug_8h_aef70c8e59b9a71be54e6f859df15a183}{h\+\_\+warning} (const char $\ast$file, const int line, char $\ast$fmt,...)
+\item 
+void \hyperlink{debug_8h_ae9f36ff80fde369e5dc95cd100bcfb0d}{h\+\_\+error} (const char $\ast$file, const int line, int exit\+Code, char $\ast$fmt,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macros das funções de depuração. 
+
+Macros que serão usadas nos programas desenvolvidos ao longo dos exemplos. Estas macros podem receber um número variável de parâmetros através de uma string de formatação como no \char`\"{}printf\char`\"{}. Seguem-\/se alguns exemplos\+: 
+\begin{DoxyCode}
+\hyperlink{debug_8h_a96dd473db0b3d10bd43390cdacb00120}{DEBUG}(\textcolor{stringliteral}{"i = %d e f=.2f%"}, i, f);
+\hyperlink{debug_8h_a8f448861da74111034b91e293ab3a278}{ERROR}(\textcolor{stringliteral}{"%s"}, msg);
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+Miguel Frade, Patricio Domingues, Vitor Carreira 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Agosto de 2003 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+2 
+\end{DoxyVersion}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{debug_8h_a96dd473db0b3d10bd43390cdacb00120}{}\index{debug.\+h@{debug.\+h}!D\+E\+B\+U\+G@{D\+E\+B\+U\+G}}
+\index{D\+E\+B\+U\+G@{D\+E\+B\+U\+G}!debug.\+h@{debug.\+h}}
+\subsubsection[{D\+E\+B\+U\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G(
+\begin{DoxyParamCaption}
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf debug}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}\label{debug_8h_a96dd473db0b3d10bd43390cdacb00120}
+Macro para imprimir no stderr informações úteis para depuração. O número de parâmetros de entrada é variável.
+
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_acc17bf1a6a66cde4a4b03e1376e68e20}{debug()} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_a8f448861da74111034b91e293ab3a278}{}\index{debug.\+h@{debug.\+h}!E\+R\+R\+O\+R@{E\+R\+R\+O\+R}}
+\index{E\+R\+R\+O\+R@{E\+R\+R\+O\+R}!debug.\+h@{debug.\+h}}
+\subsubsection[{E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{exit\+Code, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf error}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, (exit\+Code), \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}\label{debug_8h_a8f448861da74111034b91e293ab3a278}
+Macro para imprimir no stderr informação relacionada com insucesso de chamadas de funções e termina a execução do programa. O número de parâmetros de entrada é variável.
+
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_a00ba4f07a31f46cef16f3057b8662a96}{error()} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_aa533515393a45f031c0841bb27e6f6ad}{}\index{debug.\+h@{debug.\+h}!H\+\_\+\+E\+R\+R\+O\+R@{H\+\_\+\+E\+R\+R\+O\+R}}
+\index{H\+\_\+\+E\+R\+R\+O\+R@{H\+\_\+\+E\+R\+R\+O\+R}!debug.\+h@{debug.\+h}}
+\subsubsection[{H\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+\_\+\+E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{exit\+Code, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf h\+\_\+error}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, (exit\+Code), \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}\label{debug_8h_aa533515393a45f031c0841bb27e6f6ad}
+Macro para imprimir no stderr informação relacionada com insucesso de chamadas de funções de resolução de nomes e termina a execução do programa. O número de parâmetros de entrada é variável.
+
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_ae9f36ff80fde369e5dc95cd100bcfb0d}{h\+\_\+error()} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_ada8f08bfa2fb4ed49f70f607b1673eca}{}\index{debug.\+h@{debug.\+h}!H\+\_\+\+W\+A\+R\+N\+I\+N\+G@{H\+\_\+\+W\+A\+R\+N\+I\+N\+G}}
+\index{H\+\_\+\+W\+A\+R\+N\+I\+N\+G@{H\+\_\+\+W\+A\+R\+N\+I\+N\+G}!debug.\+h@{debug.\+h}}
+\subsubsection[{H\+\_\+\+W\+A\+R\+N\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+\_\+\+W\+A\+R\+N\+I\+N\+G(
+\begin{DoxyParamCaption}
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf h\+\_\+warning}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}\label{debug_8h_ada8f08bfa2fb4ed49f70f607b1673eca}
+Macro para imprimir no stderr informação relacionada com insucesso de chamadas de funções de resolução de nomes, mas não termina a execução do programa. O número de parâmetros de entrada é variável.
+
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_aef70c8e59b9a71be54e6f859df15a183}{h\+\_\+warning()} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_a8d12d0f11fc9acd2f1fa22d80895ddae}{}\index{debug.\+h@{debug.\+h}!W\+A\+R\+N\+I\+N\+G@{W\+A\+R\+N\+I\+N\+G}}
+\index{W\+A\+R\+N\+I\+N\+G@{W\+A\+R\+N\+I\+N\+G}!debug.\+h@{debug.\+h}}
+\subsubsection[{W\+A\+R\+N\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+A\+R\+N\+I\+N\+G(
+\begin{DoxyParamCaption}
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf warning}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}\label{debug_8h_a8d12d0f11fc9acd2f1fa22d80895ddae}
+Macro para imprimir no stderr informação relacionada com insucesso de chamadas de funções, mas não termina a execução do programa. O número de parâmetros de entrada é variável.
+
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_a4befecaccba59492862dbf09c4c82b24}{warning()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{debug_8h_acc17bf1a6a66cde4a4b03e1376e68e20}{}\index{debug.\+h@{debug.\+h}!debug@{debug}}
+\index{debug@{debug}!debug.\+h@{debug.\+h}}
+\subsubsection[{debug(const char $\ast$file, const int line, char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{const int}]{line, }
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{debug_8h_acc17bf1a6a66cde4a4b03e1376e68e20}
+Esta função deve ser utilizada para auxiliar a depuração de programas. Esta função {\bfseries não deve} ser chamada directamente, mas sim através da macro \hyperlink{debug_8h_a96dd473db0b3d10bd43390cdacb00120}{D\+E\+B\+U\+G()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & nome do ficheiro (através da macro D\+E\+B\+U\+G) \\
+\hline
+{\em line} & linha onde a função foi chamada (através da macro D\+E\+B\+U\+G) \\
+\hline
+{\em fmt} & string de formatação como no \char`\"{}printf\char`\"{} \\
+\hline
+{\em ...} & nº variável de parâmetros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_a96dd473db0b3d10bd43390cdacb00120}{D\+E\+B\+U\+G} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_a00ba4f07a31f46cef16f3057b8662a96}{}\index{debug.\+h@{debug.\+h}!error@{error}}
+\index{error@{error}!debug.\+h@{debug.\+h}}
+\subsubsection[{error(const char $\ast$file, const int line, int exit\+Code, char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{const int}]{line, }
+\item[{int}]{exit\+Code, }
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{debug_8h_a00ba4f07a31f46cef16f3057b8662a96}
+Função que envia para o canal de erros a mensagem \char`\"{}\+E\+R\+R\+O\+R\char`\"{} rotulada com o nome do ficheiro e da linha da função chamante, e ainda da mensagem de erro do sistema. A função {\bfseries não deve} ser chamada directamente, mas sim através da macro \hyperlink{debug_8h_a8f448861da74111034b91e293ab3a278}{E\+R\+R\+O\+R()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & nome do ficheiro fonte da função chamante (através da macro E\+R\+R\+O\+R) \\
+\hline
+{\em line} & linha onde a função foi chamada (através da macro E\+R\+R\+O\+R) \\
+\hline
+{\em exit\+Code} & valor passado à função \char`\"{}exit()\char`\"{} \\
+\hline
+{\em fmt} & string de formatação como no \char`\"{}printf\char`\"{} \\
+\hline
+{\em ...} & nº variável de parâmetros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_a8f448861da74111034b91e293ab3a278}{E\+R\+R\+O\+R} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_ae9f36ff80fde369e5dc95cd100bcfb0d}{}\index{debug.\+h@{debug.\+h}!h\+\_\+error@{h\+\_\+error}}
+\index{h\+\_\+error@{h\+\_\+error}!debug.\+h@{debug.\+h}}
+\subsubsection[{h\+\_\+error(const char $\ast$file, const int line, int exit\+Code, char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void h\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{const int}]{line, }
+\item[{int}]{exit\+Code, }
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{debug_8h_ae9f36ff80fde369e5dc95cd100bcfb0d}
+Função que envia para o canal de erros a mensagem \char`\"{}\+H\+\_\+\+E\+R\+R\+O\+R\char`\"{} rotulada com o nome do ficheiro e da linha da função chamante, e ainda da mensagem de erro do sistema. A função {\bfseries não deve} ser chamada directamente, mas sim através da macro \hyperlink{debug_8h_aa533515393a45f031c0841bb27e6f6ad}{H\+\_\+\+E\+R\+R\+O\+R()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & nome do ficheiro fonte da função chamante (através da macro H\+\_\+\+E\+R\+R\+O\+R) \\
+\hline
+{\em line} & linha onde a função foi chamada (através da macro H\+\_\+\+E\+R\+R\+O\+R) \\
+\hline
+{\em exit\+Code} & valor passado à função \char`\"{}exit()\char`\"{} \\
+\hline
+{\em fmt} & string de formatação como no \char`\"{}printf\char`\"{} \\
+\hline
+{\em ...} & nº variável de parâmetros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_aa533515393a45f031c0841bb27e6f6ad}{H\+\_\+\+E\+R\+R\+O\+R} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_aef70c8e59b9a71be54e6f859df15a183}{}\index{debug.\+h@{debug.\+h}!h\+\_\+warning@{h\+\_\+warning}}
+\index{h\+\_\+warning@{h\+\_\+warning}!debug.\+h@{debug.\+h}}
+\subsubsection[{h\+\_\+warning(const char $\ast$file, const int line, char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void h\+\_\+warning (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{const int}]{line, }
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{debug_8h_aef70c8e59b9a71be54e6f859df15a183}
+Função que envia para o canal de erros a mensagem \char`\"{}\+H\+\_\+\+W\+A\+R\+N\+I\+N\+G\char`\"{} rotulada com o nome do ficheiro e da linha da função chamante, e ainda da mensagem de erro do sistema. A função {\bfseries não deve} ser chamada directamente, mas sim através da macro \hyperlink{debug_8h_ada8f08bfa2fb4ed49f70f607b1673eca}{H\+\_\+\+W\+A\+R\+N\+I\+N\+G()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & nome do ficheiro fonte da função chamante (através da macro H\+\_\+\+W\+A\+R\+N\+I\+N\+G) \\
+\hline
+{\em line} & linha onde a função foi chamada (através da macro H\+\_\+\+W\+A\+R\+N\+I\+N\+G) \\
+\hline
+{\em fmt} & string de formatação como no \char`\"{}printf\char`\"{} \\
+\hline
+{\em ...} & nº variável de parâmetros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_ada8f08bfa2fb4ed49f70f607b1673eca}{H\+\_\+\+W\+A\+R\+N\+I\+N\+G} 
+\end{DoxySeeAlso}
+\hypertarget{debug_8h_a4befecaccba59492862dbf09c4c82b24}{}\index{debug.\+h@{debug.\+h}!warning@{warning}}
+\index{warning@{warning}!debug.\+h@{debug.\+h}}
+\subsubsection[{warning(const char $\ast$file, const int line, char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void warning (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{const int}]{line, }
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{debug_8h_a4befecaccba59492862dbf09c4c82b24}
+Função que envia para o canal de erros a mensagem \char`\"{}\+W\+A\+R\+N\+I\+N\+G\char`\"{} rotulada com o nome do ficheiro e da linha da função chamante e ainda da mensagem de erro do sistema. A função {\bfseries não deve} ser chamada directamente, mas sim através da macro \hyperlink{debug_8h_a8d12d0f11fc9acd2f1fa22d80895ddae}{W\+A\+R\+N\+I\+N\+G()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & nome do ficheiro fonte da função chamante (através da macro W\+A\+R\+N\+I\+N\+G) \\
+\hline
+{\em line} & linha onde a função foi chamada (através da macro W\+A\+R\+N\+I\+N\+G) \\
+\hline
+{\em fmt} & string de formatação como no \char`\"{}printf\char`\"{} \\
+\hline
+{\em ...} & nº variável de parâmetros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função não retorna nada 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{debug_8h_a8d12d0f11fc9acd2f1fa22d80895ddae}{W\+A\+R\+N\+I\+N\+G} 
+\end{DoxySeeAlso}

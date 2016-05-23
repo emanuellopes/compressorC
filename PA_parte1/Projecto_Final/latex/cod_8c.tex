@@ -1,0 +1,184 @@
+\hypertarget{cod_8c}{}\section{cod.\+c File Reference}
+\label{cod_8c}\index{cod.\+c@{cod.\+c}}
+
+
+ficheiro com funções para ler os ficheiros .C\+O\+D  
+
+
+{\ttfamily \#include \char`\"{}cod.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{cod_8c_a360c9985d244dae4810e34b508c68823}{open\+\_\+file\+\_\+cod} (char $\ast$path, \hyperlink{structcod__t}{cod\+\_\+t} $\ast$cod\+File)
+\begin{DoxyCompactList}\small\item\em Abrir ficheiro cod. \end{DoxyCompactList}\item 
+int \hyperlink{cod_8c_ad339185e35afa282293bbd0c401e92b4}{read\+\_\+header\+\_\+cod} (F\+I\+L\+E $\ast$stream, char $\ast$path, \hyperlink{structheader__cod__t}{header\+\_\+cod\+\_\+t} $\ast$header)
+\begin{DoxyCompactList}\small\item\em lê o cabeçalho do ficheiro \end{DoxyCompactList}\item 
+int \hyperlink{cod_8c_a5876d669ad6bf864db75e1ed8e414219}{read\+\_\+body\+\_\+cod} (F\+I\+L\+E $\ast$stream, \hyperlink{structcod__t}{cod\+\_\+t} $\ast$cod\+File)
+\begin{DoxyCompactList}\small\item\em lê o corpo do ficheiro \end{DoxyCompactList}\item 
+int \hyperlink{cod_8c_ad30fcbd1b2a3f951e9104f7eb954a9bc}{is\+\_\+cod\+\_\+file} (char $\ast$line, file\+\_\+cod\+\_\+t $\ast$version)
+\begin{DoxyCompactList}\small\item\em verifica e devolve a versao do ficheiro Z2 ou Z5 \end{DoxyCompactList}\item 
+int \hyperlink{cod_8c_a743cbb09bb9a7d53fc9fdcf51f34e4b0}{get\+\_\+cod\+\_\+blocks} (char $\ast$line, unsigned int $\ast$width, unsigned int $\ast$height)
+\begin{DoxyCompactList}\small\item\em grava os bloco largura e altura \end{DoxyCompactList}\item 
+int \hyperlink{cod_8c_ac77210cb6515ff2127dc74fc6d749648}{check\+\_\+blocks} (int width, int height, int block\+Rows, int block\+Columns)
+\begin{DoxyCompactList}\small\item\em verifica se os blocos são correctos \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+ficheiro com funções para ler os ficheiros .C\+O\+D 
+
+\begin{DoxyAuthor}{Author}
+Emanuel João Conceição Lopes \href{mailto:2140825@student.estg.ipleiria.pt}{\tt 2140825@student.\+estg.\+ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{cod_8c_ac77210cb6515ff2127dc74fc6d749648}{}\index{cod.\+c@{cod.\+c}!check\+\_\+blocks@{check\+\_\+blocks}}
+\index{check\+\_\+blocks@{check\+\_\+blocks}!cod.\+c@{cod.\+c}}
+\subsubsection[{check\+\_\+blocks(int width, int height, int block\+Rows, int block\+Columns)}]{\setlength{\rightskip}{0pt plus 5cm}int check\+\_\+blocks (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{block\+Rows, }
+\item[{int}]{block\+Columns}
+\end{DoxyParamCaption}
+)}\label{cod_8c_ac77210cb6515ff2127dc74fc6d749648}
+
+
+verifica se os blocos são correctos 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & largura da imagem \\
+\hline
+{\em height} & altura da imagem \\
+\hline
+{\em block\+Rows} & largura dos blocos \\
+\hline
+{\em block\+Columns} & altura dos blocos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0=succefull and !=0 is error 
+\end{DoxyReturn}
+\hypertarget{cod_8c_a743cbb09bb9a7d53fc9fdcf51f34e4b0}{}\index{cod.\+c@{cod.\+c}!get\+\_\+cod\+\_\+blocks@{get\+\_\+cod\+\_\+blocks}}
+\index{get\+\_\+cod\+\_\+blocks@{get\+\_\+cod\+\_\+blocks}!cod.\+c@{cod.\+c}}
+\subsubsection[{get\+\_\+cod\+\_\+blocks(char $\ast$line, unsigned int $\ast$width, unsigned int $\ast$height)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+cod\+\_\+blocks (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{unsigned int $\ast$}]{width, }
+\item[{unsigned int $\ast$}]{height}
+\end{DoxyParamCaption}
+)}\label{cod_8c_a743cbb09bb9a7d53fc9fdcf51f34e4b0}
+
+
+grava os bloco largura e altura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & linha do ficheiro de texto \\
+\hline
+{\em width} & -\/ largura \\
+\hline
+{\em height} & -\/ altura \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1=succefull 0=error 
+\end{DoxyReturn}
+\hypertarget{cod_8c_ad30fcbd1b2a3f951e9104f7eb954a9bc}{}\index{cod.\+c@{cod.\+c}!is\+\_\+cod\+\_\+file@{is\+\_\+cod\+\_\+file}}
+\index{is\+\_\+cod\+\_\+file@{is\+\_\+cod\+\_\+file}!cod.\+c@{cod.\+c}}
+\subsubsection[{is\+\_\+cod\+\_\+file(char $\ast$line, file\+\_\+cod\+\_\+t $\ast$version)}]{\setlength{\rightskip}{0pt plus 5cm}int is\+\_\+cod\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{file\+\_\+cod\+\_\+t $\ast$}]{version}
+\end{DoxyParamCaption}
+)}\label{cod_8c_ad30fcbd1b2a3f951e9104f7eb954a9bc}
+
+
+verifica e devolve a versao do ficheiro Z2 ou Z5 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & -\/ linha do ficheiro de texto \\
+\hline
+{\em version} & -\/ versao do ficheiro\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/succefull, !=0 em caso de erro 
+\end{DoxyReturn}
+\hypertarget{cod_8c_a360c9985d244dae4810e34b508c68823}{}\index{cod.\+c@{cod.\+c}!open\+\_\+file\+\_\+cod@{open\+\_\+file\+\_\+cod}}
+\index{open\+\_\+file\+\_\+cod@{open\+\_\+file\+\_\+cod}!cod.\+c@{cod.\+c}}
+\subsubsection[{open\+\_\+file\+\_\+cod(char $\ast$path, cod\+\_\+t $\ast$cod\+File)}]{\setlength{\rightskip}{0pt plus 5cm}int open\+\_\+file\+\_\+cod (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path, }
+\item[{{\bf cod\+\_\+t} $\ast$}]{cod\+File}
+\end{DoxyParamCaption}
+)}\label{cod_8c_a360c9985d244dae4810e34b508c68823}
+
+
+Abrir ficheiro cod. 
+
+prototipos
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ caminho do ficheiro \\
+\hline
+{\em cod\+File} & estrutura do ficheiro\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+!=0 in case os error 
+\end{DoxyReturn}
+\hypertarget{cod_8c_a5876d669ad6bf864db75e1ed8e414219}{}\index{cod.\+c@{cod.\+c}!read\+\_\+body\+\_\+cod@{read\+\_\+body\+\_\+cod}}
+\index{read\+\_\+body\+\_\+cod@{read\+\_\+body\+\_\+cod}!cod.\+c@{cod.\+c}}
+\subsubsection[{read\+\_\+body\+\_\+cod(\+F\+I\+L\+E $\ast$stream, cod\+\_\+t $\ast$cod\+File)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+body\+\_\+cod (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream, }
+\item[{{\bf cod\+\_\+t} $\ast$}]{cod\+File}
+\end{DoxyParamCaption}
+)}\label{cod_8c_a5876d669ad6bf864db75e1ed8e414219}
+
+
+lê o corpo do ficheiro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & \\
+\hline
+{\em cod\+File} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+!=0 erro 0=ok 
+\end{DoxyReturn}
+\hypertarget{cod_8c_ad339185e35afa282293bbd0c401e92b4}{}\index{cod.\+c@{cod.\+c}!read\+\_\+header\+\_\+cod@{read\+\_\+header\+\_\+cod}}
+\index{read\+\_\+header\+\_\+cod@{read\+\_\+header\+\_\+cod}!cod.\+c@{cod.\+c}}
+\subsubsection[{read\+\_\+header\+\_\+cod(\+F\+I\+L\+E $\ast$stream, char $\ast$path, header\+\_\+cod\+\_\+t $\ast$header)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+header\+\_\+cod (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream, }
+\item[{char $\ast$}]{path, }
+\item[{{\bf header\+\_\+cod\+\_\+t} $\ast$}]{header}
+\end{DoxyParamCaption}
+)}\label{cod_8c_ad339185e35afa282293bbd0c401e92b4}
+
+
+lê o cabeçalho do ficheiro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & -\/ ficheiro \\
+\hline
+{\em path} & -\/ name of file \\
+\hline
+{\em header} & -\/ estrutura do ficheiro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0=Succefull ou !=0 em caso de erro 
+\end{DoxyReturn}

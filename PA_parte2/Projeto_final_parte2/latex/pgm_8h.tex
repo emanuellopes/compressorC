@@ -1,0 +1,133 @@
+\hypertarget{pgm_8h}{}\section{pgm.\+h File Reference}
+\label{pgm_8h}\index{pgm.\+h@{pgm.\+h}}
+
+
+Function to handle P\+G\+M files.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpgm__header__t}{pgm\+\_\+header\+\_\+t}
+\item 
+struct \hyperlink{structpgm__t}{pgm\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{pgm_8h_a8c5948362728072def386a942eba8cc2}{pgm\+\_\+format\+\_\+t} \{ {\bfseries P2} = 2, 
+{\bfseries P5} = 5
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpgm__t}{pgm\+\_\+t} \hyperlink{pgm_8h_a7c278dab6910f2e4b77da6afccd74993}{pgm\+\_\+init} (void)
+\item 
+\hyperlink{structpgm__t}{pgm\+\_\+t} \hyperlink{pgm_8h_a969d4cd8b4fb6c72fded391aca67d62c}{pgm\+\_\+create} (\hyperlink{pgm_8h_a8c5948362728072def386a942eba8cc2}{pgm\+\_\+format\+\_\+t} format, unsigned int width, unsigned int height)
+\item 
+int \hyperlink{pgm_8h_ad38d4da8a30e92d00fc6373ba89f23bf}{pgm\+\_\+parse\+\_\+file} (const char $\ast$filename, \hyperlink{structpgm__t}{pgm\+\_\+t} $\ast$pgm)
+\item 
+int \hyperlink{pgm_8h_a6a365605eba71f0b6bc4567a38e9709e}{pgm\+\_\+write\+\_\+file} (const char $\ast$filename, \hyperlink{structpgm__t}{pgm\+\_\+t} $\ast$pgm)
+\item 
+void \hyperlink{pgm_8h_a7509649bb1c4d9d68245d57e30fb76af}{pgm\+\_\+free} (\hyperlink{structpgm__t}{pgm\+\_\+t} $\ast$pgm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function to handle P\+G\+M files. 
+
+\begin{DoxyDate}{Date}
+2015-\/11-\/25 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\href{mailto:vitor.carreira@ipleiria.pt}{\tt vitor.\+carreira@ipleiria.\+pt} 
+\end{DoxyAuthor}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{pgm_8h_a8c5948362728072def386a942eba8cc2}{}\index{pgm.\+h@{pgm.\+h}!pgm\+\_\+format\+\_\+t@{pgm\+\_\+format\+\_\+t}}
+\index{pgm\+\_\+format\+\_\+t@{pgm\+\_\+format\+\_\+t}!pgm.\+h@{pgm.\+h}}
+\subsubsection[{pgm\+\_\+format\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf pgm\+\_\+format\+\_\+t}}\label{pgm_8h_a8c5948362728072def386a942eba8cc2}
+Type of P\+G\+M file. 
+
+\subsection{Function Documentation}
+\hypertarget{pgm_8h_a969d4cd8b4fb6c72fded391aca67d62c}{}\index{pgm.\+h@{pgm.\+h}!pgm\+\_\+create@{pgm\+\_\+create}}
+\index{pgm\+\_\+create@{pgm\+\_\+create}!pgm.\+h@{pgm.\+h}}
+\subsubsection[{pgm\+\_\+create(pgm\+\_\+format\+\_\+t format, unsigned int width, unsigned int height)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pgm\+\_\+t} pgm\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf pgm\+\_\+format\+\_\+t}}]{format, }
+\item[{unsigned int}]{width, }
+\item[{unsigned int}]{height}
+\end{DoxyParamCaption}
+)}\label{pgm_8h_a969d4cd8b4fb6c72fded391aca67d62c}
+Initializes a P\+G\+M structure with the given size 
+\begin{DoxyParams}{Parameters}
+{\em format} & the P\+G\+M file format \\
+\hline
+{\em width} & width of the image \\
+\hline
+{\em height} & height of the image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a P\+G\+M structure initialized with the specified size 
+\end{DoxyReturn}
+\hypertarget{pgm_8h_a7509649bb1c4d9d68245d57e30fb76af}{}\index{pgm.\+h@{pgm.\+h}!pgm\+\_\+free@{pgm\+\_\+free}}
+\index{pgm\+\_\+free@{pgm\+\_\+free}!pgm.\+h@{pgm.\+h}}
+\subsubsection[{pgm\+\_\+free(pgm\+\_\+t $\ast$pgm)}]{\setlength{\rightskip}{0pt plus 5cm}void pgm\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf pgm\+\_\+t} $\ast$}]{pgm}
+\end{DoxyParamCaption}
+)}\label{pgm_8h_a7509649bb1c4d9d68245d57e30fb76af}
+Release the memory held by the provided pgm structure 
+\begin{DoxyParams}{Parameters}
+{\em pgm} & a pointer to the structure to release \\
+\hline
+\end{DoxyParams}
+\hypertarget{pgm_8h_a7c278dab6910f2e4b77da6afccd74993}{}\index{pgm.\+h@{pgm.\+h}!pgm\+\_\+init@{pgm\+\_\+init}}
+\index{pgm\+\_\+init@{pgm\+\_\+init}!pgm.\+h@{pgm.\+h}}
+\subsubsection[{pgm\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pgm\+\_\+t} pgm\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pgm_8h_a7c278dab6910f2e4b77da6afccd74993}
+Initializes a P\+G\+M structure \begin{DoxyReturn}{Returns}
+a P\+G\+M structure initialized 
+\end{DoxyReturn}
+\hypertarget{pgm_8h_ad38d4da8a30e92d00fc6373ba89f23bf}{}\index{pgm.\+h@{pgm.\+h}!pgm\+\_\+parse\+\_\+file@{pgm\+\_\+parse\+\_\+file}}
+\index{pgm\+\_\+parse\+\_\+file@{pgm\+\_\+parse\+\_\+file}!pgm.\+h@{pgm.\+h}}
+\subsubsection[{pgm\+\_\+parse\+\_\+file(const char $\ast$filename, pgm\+\_\+t $\ast$pgm)}]{\setlength{\rightskip}{0pt plus 5cm}int pgm\+\_\+parse\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf pgm\+\_\+t} $\ast$}]{pgm}
+\end{DoxyParamCaption}
+)}\label{pgm_8h_ad38d4da8a30e92d00fc6373ba89f23bf}
+Parses a pgm file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename\textquotesingle{}s path to be parsed. \\
+\hline
+{\em pgm} & pointer to the structure where the content of the file is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success; a positive error code otherwise 
+\end{DoxyReturn}
+\hypertarget{pgm_8h_a6a365605eba71f0b6bc4567a38e9709e}{}\index{pgm.\+h@{pgm.\+h}!pgm\+\_\+write\+\_\+file@{pgm\+\_\+write\+\_\+file}}
+\index{pgm\+\_\+write\+\_\+file@{pgm\+\_\+write\+\_\+file}!pgm.\+h@{pgm.\+h}}
+\subsubsection[{pgm\+\_\+write\+\_\+file(const char $\ast$filename, pgm\+\_\+t $\ast$pgm)}]{\setlength{\rightskip}{0pt plus 5cm}int pgm\+\_\+write\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf pgm\+\_\+t} $\ast$}]{pgm}
+\end{DoxyParamCaption}
+)}\label{pgm_8h_a6a365605eba71f0b6bc4567a38e9709e}
+Writes a pgm file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & destination path. \\
+\hline
+{\em pgm} & pointer to the structure containing the contents to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success; a positive error code otherwise 
+\end{DoxyReturn}
